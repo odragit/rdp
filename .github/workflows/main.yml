@@ -1,0 +1,45 @@
+name: FreeRDP
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 99999
+
+    steps:
+    - name: Downloading NGROK & NSSM.
+      run: |
+        Invoke-WebRequest https://github.com/odragit/nothing/raw/main/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://github.com/odragit/nothing/raw/main/nssm.exe -OutFile nssm.exe
+    - name: Copy NGROK & NSSM to Windows Directory.
+      run: | 
+        copy nssm.exe C:\Windows\System32
+        copy ngrok.exe C:\Windows\System32
+    - name: Download Important Files.
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/nothing/main/wallpaper.png -OutFile wallpaper.bmp
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/nothing/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/nothing/main/NGROK.bat -OutFile NGROK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/nothing/main/Start.bat -OutFile Start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/nothing/main/loop.ps1 -OutFile loop.ps1
+        copy wallpaper.bmp D:\a\wallpaper.bmp
+        copy wallpaper.bat D:\a\wallpaper.bat
+    - name: Connect your NGROK account
+      run: .\ngrok.exe authtoken $Env:NGROK_TOKEN
+      env:
+        NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+    - name: Make YML file for NGROK.
+      run: start NGROK.bat
+    - name: Enable RDP Access.
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Creating Tunnel
+      run: sc start ngrok
+    - name: Connect to your RDP
+      run: cmd /c Start.bat
+    - name: All Done! You can close Tab now! Maximum VM time:6h.
+      run: ./loop.ps1
