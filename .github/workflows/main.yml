@@ -19,15 +19,13 @@ jobs:
         copy ngrok.exe C:\Windows\System32
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/gtspam.zip -OutFile gtspam.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/GrowtopiaInstaller.exe -OutFile Growtopia.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip -OutFile gtpack.zip
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.bat -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/NGROK.bat -OutFile NGROK.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/Start.bat -OutFile Start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/loop.ps1 -OutFile loop.ps1
-        copy gtspam.zip C:\gtspam.zip
-        copy Growtopia.exe C:\Growtopia.exe
+        copy gtpack.zip C:\gtpack.zip
         copy wallpaper.bmp D:\a\wallpaper.bmp
         copy wallpaper.bat D:\a\wallpaper.bat
     - name: Connect your NGROK account
