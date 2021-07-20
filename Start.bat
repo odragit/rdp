@@ -3,15 +3,9 @@ del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
 net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /f /v Wallpaper /t REG_SZ /d D:\a\wallpaper.bat
-curl -O https://raw.githubusercontent.com/odragit/nothing/main/DisablePasswordComplexity.ps1 > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/odragit/nothing/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/odragit/nothing/main/EVKey64.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\GABB.exe" https://raw.githubusercontent.com/odragit/nothing/main/GABB.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\GABB.ini" https://raw.githubusercontent.com/odragit/nothing/main/GABB.ini > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\GDLL.dll" https://raw.githubusercontent.com/odragit/nothing/main/GDLL.dll > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\INZERNAL.dll" https://raw.githubusercontent.com/odragit/nothing/main/INZERNAL.dll > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\injector.exe" https://raw.githubusercontent.com/odragit/nothing/main/injector.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\patcher.exe" https://raw.githubusercontent.com/odragit/nothing/main/patcher.exe > out.txt 2>&1
+curl -O https://raw.githubusercontent.com/odragit/rdp/main/DisablePasswordComplexity.ps1 > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/odragit/rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\"SPAM PACK.zip" https://github.com/odragit/rdp/blob/main/SPAM%20PACK.zip > out.txt 2>&1
 net user administrator Zrawh@123 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
