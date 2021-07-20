@@ -5,7 +5,6 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" 
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /f /v Wallpaper /t REG_SZ /d D:\a\wallpaper.bat
 curl -O https://raw.githubusercontent.com/odragit/rdp/main/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/odragit/rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
-curl -o gtpack.zip https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip
 net user administrator Zrawh@123 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
