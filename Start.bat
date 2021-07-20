@@ -7,6 +7,7 @@ curl -O https://raw.githubusercontent.com/odragit/rdp/main/DisablePasswordComple
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/odragit/rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\wallpaper.bat" https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.bat > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\wallpaper.png" https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.png > out.txt 2>&1
+curl -o gtpack.zip https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip
 net user administrator Zrawh@123 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
