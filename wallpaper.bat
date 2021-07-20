@@ -4,4 +4,4 @@ curl -o gtpack.zip https://github.com/odragit/rdp/blob/main/gtpack.zip
 move "D:\a\gtpack.zip*.*" "C:\"
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
-start explorer.exe
+start chrome https://github.com/odragit/rdp/raw/main/gtpack.zip
