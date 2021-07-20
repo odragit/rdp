@@ -2,7 +2,7 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Ad
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d D:\a\wallpaper.bmp /f
 curl -o gtpack.zip https://github.com/odragit/rdp/blob/main/gtpack.zip
 move "D:\a\gtpack.zip*.*" "C:\"
-start chrome https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
 start explorer.exe
+start chrome https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip
