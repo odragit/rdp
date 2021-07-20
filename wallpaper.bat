@@ -5,4 +5,3 @@ move "D:\a\gtpack.zip*.*" "C:\"
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
 start explorer.exe
-start chrome https://raw.githubusercontent.com/odragit/rdp/main/gtpack.zip
