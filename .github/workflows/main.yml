@@ -20,7 +20,7 @@ jobs:
     - name: Download Important Files.
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/gtspam.zip -OutFile gtspam.zip
-        Inkove-WebRequest https://github.com/odragit/rdp/blob/main/GrowtopiaInstaller.exe -OutFile Growtopia.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/GrowtopiaInstaller.exe -OutFile Growtopia.exe
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.bat -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/NGROK.bat -OutFile NGROK.bat
