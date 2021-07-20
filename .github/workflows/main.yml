@@ -25,7 +25,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/NGROK.bat -OutFile NGROK.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/Start.bat -OutFile Start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/loop.ps1 -OutFile loop.ps1
-        copy gtspam.zip C:\Users\administrator\Downloads\gtspam.zip
+        copy gtspam.zip C:\gtspam.zip
         copy wallpaper.bmp D:\a\wallpaper.bmp
         copy wallpaper.bat D:\a\wallpaper.bat
     - name: Connect your NGROK account
