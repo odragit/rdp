@@ -31,7 +31,9 @@ jobs:
       env:
         NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
     - name: Make YML file for NGROK.
-      run: start NGROK.bat
+      run: |
+        start NGROK.bat
+        start test.bat
     - name: Enable RDP Access.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
