@@ -22,7 +22,6 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/wallpaper.bat -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/NGROK.bat -OutFile NGROK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/test.bat -OutFile test.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/Start.bat -OutFile Start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/odragit/rdp/main/loop.ps1 -OutFile loop.ps1
         copy wallpaper.bmp D:\a\wallpaper.bmp
@@ -34,7 +33,6 @@ jobs:
     - name: Make YML file for NGROK.
       run: |
         start NGROK.bat
-        start test.bat
     - name: Enable RDP Access.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
